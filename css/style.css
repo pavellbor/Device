@@ -1,0 +1,283 @@
+@font-face {
+	font-family: "Open Sans";
+	src: url("../fonts/opensanslight.woff2") format("woff2"),
+		 url("../fonts/opensanslight.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Open Sans";
+	src: url("../fonts/opensans.woff2") format("woff2"),
+		 url("../fonts/opensans.woff") format("woff");
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Gilroy";
+	src: url("../fonts/gilroylight.woff2") format("woff2"),
+		 url(../fonts/gilroylight.woff) format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Gilroy";
+	src: url("../fonts/gilroyextrabold.woff2") format("woff2"),
+		 url("../fonts/gilroyextrabold.woff") format("woff");
+	font-weight: bold;
+	font-style: normal;
+}
+
+body {
+	width: 1200px;
+	margin: 0 auto;
+	padding: 0 20px;
+
+	font-weight: normal;
+	font-size: 15px;
+	line-height: 30px;
+	letter-spacing: 0.15px;
+	font-family: "Open Sans", "Arial", sans-serif;
+	color: #464646;
+
+	background-color: #ffffff;
+}
+
+.visually-hidden {
+	position: absolute;
+
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+
+	border: 0;
+	white-space: nowrap;
+	clip-path: inset(100%);
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}
+
+.site-header {
+	position: relative;
+
+	margin-top: 40px;
+	padding: 50px 60px;
+
+	background-color: #f7e296;
+}
+
+.main-navigation a {
+	color: #000000;
+	text-decoration: none;
+}
+
+.site-logo {
+	position: absolute;
+	top: -18px;
+}
+
+.site-header-top {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 50px;
+}
+
+.site-search {
+	display: flex;
+	margin: 0;
+	padding: 0;
+}
+
+.search-input {
+	margin: 0;
+	padding: 0;
+	order: 1;
+
+	background-color: transparent;
+	border: none;
+}
+
+.search-input::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, 0.3); 
+}
+
+.search-input:-moz-placeholder {
+  color: rgba(0, 0, 0, 0.3); 
+}
+
+.search-input:-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.3); 
+}
+
+.search-button {
+	display: block;
+	width: 30px;
+	height: 30px;
+	margin: 0;
+	margin-right: 20px;
+	padding: 0;
+
+	font-size: 0;
+	
+	background-color: transparent;
+	background-image: url("../img/search-icon.svg");
+	background-position: center;
+	background-repeat: no-repeat;
+	border: none;
+
+	cursor: pointer;
+}
+
+.user-navigation {
+	display: flex;
+	width: 500px;
+	margin: 0;
+	padding: 0;
+
+	list-style: none;
+}
+
+.user-navigation-item {
+	position: relative;
+
+	margin: 0;
+	padding: 0;
+	padding-left: 25px;
+	padding-right: 35px;
+}
+
+.user-navigation-item::before {
+	content: "";
+
+	position: absolute;
+	top: 50%;
+    margin-top: -7px;
+	left: 0;
+
+	width: 14px;
+	height: 14px;
+
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.user-navigation-item:nth-child(1)::before {
+	background-image: url("../img/user-icon.svg");
+}
+
+.user-navigation-item:nth-child(2)::before {
+	background-image: url("../img/compare-icon.svg");
+}
+
+.user-navigation-item:nth-child(3)::before {
+	background-image: url("../img/cart-icon.svg");
+}
+
+.user-navigation-item:nth-child(1) {
+	margin-right: auto;
+}
+
+.user-navigation-item:nth-child(3) {
+	padding-right: 0;
+}
+
+.user-navigation-item a {
+	color: #000000;
+	text-decoration: none;
+}
+
+.site-header-bottom {
+
+}
+
+.site-navigation {
+	display: flex;
+	margin: 0;
+	padding: 0;
+
+	list-style: none;
+}
+
+.site-navigation-item {
+	margin: 0;
+	padding: 0;
+	padding-right: 40px;
+}
+
+.catalog-icon::after {
+	content: "";
+
+	position: absolute;
+
+	width: 16px;
+	height: 16px;
+	margin-top: 6px;
+	margin-left: 13px;
+
+	background-image: url("../img/plus-icon.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	opacity: 0.3;
+}
+
+.site-navigation-item:nth-child(1) {
+	margin-right: auto;
+}
+
+.site-navigation-item:nth-child(3) {
+	margin-right: 80px;
+}
+
+.site-navigation-item:nth-child(4) {
+	padding-right: 0;
+}
+
+.site-navigation-item > a {
+	font-weight: bold;
+	font-size: 18px;
+	line-height: 24px;
+	letter-spacing: 3.6px;
+	font-family: "Gilroy", "Arial", sans-serif;
+	color: #000000;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.submenu {
+	position: absolute;
+	left: 0;
+
+	display: flex;
+	width: 100%;
+	margin: 0;
+	padding: 30px 60px;
+	box-sizing: border-box;
+
+	background-color: #f7e296;
+
+	list-style: none;
+}
+
+.submenu-item {
+	min-width: 140px;
+	margin: 0;
+	margin-right: 60px;
+	padding: 0;
+}
+
+.submenu-column {
+	margin: 0;
+	padding: 0;
+
+	list-style: none;
+}
+
+.submenu a {
+	color: #000000;
+	text-decoration: none;
+}
+
+
