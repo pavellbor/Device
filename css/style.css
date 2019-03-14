@@ -1921,7 +1921,7 @@ input[id="slider1-3"]:checked ~ .popular-slider-list .popular-slider-item.third 
 	color: rgba(0, 0, 0, 0.3);
 }
 
-.products-item-info h3 {
+.products-item-info h2 {
 	margin: 0;
 	padding: 0;
 	max-width: 260px;
